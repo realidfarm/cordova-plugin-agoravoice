@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,9 +18,9 @@ import java.util.Locale;
 import io.agora.rtc.IRtcEngineEventHandler;
 import io.agora.rtc.RtcEngine;
 
-import com.taofeng.laodao.R;
+import com.realidfarm.impicc.R;
 
-public class VoiceChatViewActivity extends AppCompatActivity {
+public class VoiceChatViewActivity extends Activity {
 
     private static final String LOG_TAG = VoiceChatViewActivity.class.getSimpleName();
 

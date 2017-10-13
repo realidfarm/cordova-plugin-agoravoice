@@ -45,6 +45,7 @@
 
         <source-file src="src/android/java/Agoravoice.java" target-dir="src/com/realidfarm/agoravoice" />
         <source-file src="src/android/java/VoiceChatViewActivity.java" target-dir="src/com/realidfarm/agoravoice" />
+        <source-file src="src/android/java/VideoChatViewActivity.java" target-dir="src/com/realidfarm/agoravoice" />
         
         <source-file src="src/android/res/drawable/btn_end_call.png" target-dir="res/drawable" />
         <source-file src="src/android/res/drawable/btn_mute.png" target-dir="res/drawable" />

@@ -14,6 +14,7 @@ import org.json.JSONObject;
 import android.text.TextUtils;
 import android.util.Log;
 import com.realidfarm.agoravoice.VoiceChatViewActivity;
+import com.realidfarm.agoravoice.VideoChatViewActivity;
 
 public class Agoravoice extends CordovaPlugin{
 
@@ -22,9 +23,10 @@ public class Agoravoice extends CordovaPlugin{
         if (action.equals("voiceCall")) {
             Intent intent = new Intent(activity, VoiceChatViewActivity.class);
             activity.startActivity(intent);
-            // callbackContext.success("语音通话");
             return true;
-        }else if (action.equals("connect")) {
+        }else if (action.equals("videoCall")) {
+            Intent intent = new Intent(activity, VideoChatViewActivity.class);
+            activity.startActivity(intent);
             return true;
         }
         return false;
