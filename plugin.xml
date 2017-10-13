@@ -5,6 +5,8 @@
     <license>Apache 2.0</license>
     <keywords>cordova,agoravoice</keywords>
 
+    <preference name="AGORAAPPID" />
+
     <js-module name="agoravoice" src="www/agoravoice.js">
         <clobbers target="agoravoice" />
     </js-module>
@@ -15,6 +17,14 @@
                 <param name="android-package" value="com.realidfarm.agoravoice.Agoravoice" />
             </feature>
         </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Wechat">
+                <param name="android-package" value="com.realidfarm.agoravoice.Agoravoice"/>
+            </feature>
+            <preference name="AGORAAPPID" value="$AGORAAPPID"/>
+        </config-file>
+
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -22,7 +32,13 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:name="com.realidfarm.agoravoice.VoiceChatViewActivity" />
+            <activity android:name="com.realidfarm.agoravoice.VoiceChatViewActivity">
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+                    <data android:scheme="$AGORAAPPID"/>
+                </intent-filter>
+            </activity>
         </config-file>
 
         <framework src="com.android.support:appcompat-v7:25.3.1" />
