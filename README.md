@@ -3,4 +3,4 @@
 
 # 安装
 
-1. ```cordova plugin add cordova-plugin-wechat  --variable agoraappid=YOUR_AGORA_APPID```
+1. ```cordova plugin add cordova-plugin-agoravoice  --variable agoraappid=YOUR_AGORA_APPID```
