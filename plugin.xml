@@ -51,6 +51,9 @@
         <source-file src="src/android/res/drawable/btn_mute.png" target-dir="res/drawable" />
         <source-file src="src/android/res/drawable/btn_speaker.png" target-dir="res/drawable" />
         <source-file src="src/android/res/drawable/ic_launcher.png" target-dir="res/drawable" />
+        <source-file src="src/android/res/drawable/btn_switch_camera.png" target-dir="res/drawable" />
+        <source-file src="src/android/res/drawable/btn_video.png" target-dir="res/drawable" />
+        <source-file src="src/android/res/drawable/btn_voice.png" target-dir="res/drawable" />
 
         <source-file src="src/android/res/layout/activity_voice_chat_view.xml" target-dir="res/layout" />
 
