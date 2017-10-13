@@ -26,9 +26,7 @@ public class Agoravoice extends CordovaPlugin{
             // callbackContext.success("语音通话");
             return true;
         }else if (action.equals("connect")) {
-            String token = args.getString(0);
-          });
-          return true;
+            return true;
         }
         return false;
     }
