@@ -18,7 +18,7 @@ import java.util.Locale;
 import io.agora.rtc.IRtcEngineEventHandler;
 import io.agora.rtc.RtcEngine;
 
-import com.taofeng.laodao.MainActivity;
+import com.taofeng.laodao.R;
 
 public class VoiceChatViewActivity extends AppCompatActivity {
 

@@ -14,7 +14,6 @@ import org.json.JSONObject;
 import android.text.TextUtils;
 import android.util.Log;
 import com.realidfarm.agoravoice.VoiceChatViewActivity;
-import com.taofeng.laodao.MainActivity;
 
 public class Agoravoice extends CordovaPlugin{
 
