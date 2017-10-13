@@ -39,6 +39,13 @@
                     <data android:scheme="$AGORAAPPID"/>
                 </intent-filter>
             </activity>
+            <activity android:name="com.realidfarm.agoravoice.VideoChatViewActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+                    <data android:scheme="$AGORAAPPID"/>
+                </intent-filter>
+            </activity>
         </config-file>
 
         <framework src="com.android.support:appcompat-v7:25.3.1" />
