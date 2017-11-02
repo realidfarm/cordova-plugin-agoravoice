@@ -1,8 +1,8 @@
 var exec = require('cordova/exec');
 
-exports.voiceCall = function(success, error) {
-    exec(success, error, "Agoravoice", "voiceCall", []);
+exports.voiceCall = function(fromUname, targetUname, success, error) {
+    exec(success, error, "Agoravoice", "voiceCall", [fromUname, targetUname]);
 };
-exports.videoCall = function(token, success, error) {
-    exec(success, error, "Agoravoice", "videoCall", []);
+exports.videoCall = function(fromUname, targetUname, success, error) {
+    exec(success, error, "Agoravoice", "videoCall", [fromUname, targetUname]);
 };

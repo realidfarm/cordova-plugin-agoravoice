@@ -26,6 +26,7 @@ public class VoiceChatViewActivity extends Activity {
 
     private static final int PERMISSION_REQ_ID_RECORD_AUDIO = 22;
 
+    private String fromUname,targetUname;
     private RtcEngine mRtcEngine;// Tutorial Step 1
     private final IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandler() { // Tutorial Step 1
 
@@ -53,6 +54,10 @@ public class VoiceChatViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Bundle extras = this.getIntent().getExtras();
+        fromUname = extras.getString("fromUname");
+        targetUname = extras.getString("targetUname");
         setContentView(R.layout.activity_voice_chat_view);
 
         if (checkSelfPermission(Manifest.permission.RECORD_AUDIO, PERMISSION_REQ_ID_RECORD_AUDIO)) {
@@ -162,7 +167,7 @@ public class VoiceChatViewActivity extends Activity {
 
     // Tutorial Step 2
     private void joinChannel() {
-        mRtcEngine.joinChannel(null, "voiceDemoChannel1", "Extra Optional Data", 0); // if you do not specify the uid, we will generate the uid for you
+        mRtcEngine.joinChannel(null, fromUname+"voice"+targetUname, "", 0); // if you do not specify the uid, we will generate the uid for you
     }
 
     // Tutorial Step 3

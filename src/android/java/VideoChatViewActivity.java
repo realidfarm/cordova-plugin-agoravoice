@@ -29,6 +29,7 @@ public class VideoChatViewActivity extends Activity {
     private static final int PERMISSION_REQ_ID_RECORD_AUDIO = 22;
     private static final int PERMISSION_REQ_ID_CAMERA = PERMISSION_REQ_ID_RECORD_AUDIO + 1;
 
+    private String fromUname,targetUname;
     private RtcEngine mRtcEngine;// Tutorial Step 1
     private final IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandler() { // Tutorial Step 1
         @Override
@@ -65,6 +66,10 @@ public class VideoChatViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Bundle extras = this.getIntent().getExtras();
+        fromUname = extras.getString("fromUname");
+        targetUname = extras.getString("targetUname");
         setContentView(R.layout.activity_video_chat_view);
 
         if (checkSelfPermission(Manifest.permission.RECORD_AUDIO, PERMISSION_REQ_ID_RECORD_AUDIO) && checkSelfPermission(Manifest.permission.CAMERA, PERMISSION_REQ_ID_CAMERA)) {
@@ -211,7 +216,7 @@ public class VideoChatViewActivity extends Activity {
 
     // Tutorial Step 4
     private void joinChannel() {
-        mRtcEngine.joinChannel(null, "demoChannel1", "Extra Optional Data", 0); // if you do not specify the uid, we will generate the uid for you
+        mRtcEngine.joinChannel(null, fromUname+"video"+targetUname, "Extra Optional Data", 0); // if you do not specify the uid, we will generate the uid for you
     }
 
     // Tutorial Step 5
