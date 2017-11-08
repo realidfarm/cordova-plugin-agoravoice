@@ -232,8 +232,8 @@ public class VideoChatViewActivity extends Activity {
         mRtcEngine.setupRemoteVideo(new VideoCanvas(surfaceView, VideoCanvas.RENDER_MODE_ADAPTIVE, uid));
 
         surfaceView.setTag(uid); // for mark purpose
-        View tipMsg = findViewById(R.id.quick_tips_when_use_agora_sdk); // optional UI
-        tipMsg.setVisibility(View.GONE);
+        //View tipMsg = findViewById(R.id.quick_tips_when_use_agora_sdk); // optional UI
+        //tipMsg.setVisibility(View.GONE);
     }
 
     // Tutorial Step 6
@@ -246,8 +246,8 @@ public class VideoChatViewActivity extends Activity {
         FrameLayout container = (FrameLayout) findViewById(R.id.remote_video_view_container);
         container.removeAllViews();
 
-        View tipMsg = findViewById(R.id.quick_tips_when_use_agora_sdk); // optional UI
-        tipMsg.setVisibility(View.VISIBLE);
+        //View tipMsg = findViewById(R.id.quick_tips_when_use_agora_sdk); // optional UI
+        //tipMsg.setVisibility(View.VISIBLE);
     }
 
     // Tutorial Step 10

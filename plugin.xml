@@ -67,12 +67,11 @@
         <source-file src="src/android/res/layout/activity_voice_chat_view.xml" target-dir="res/layout" />
         <source-file src="src/android/res/layout/activity_video_chat_view.xml" target-dir="res/layout" />
 
-        <source-file src="src/android/res/values/colors.xml" target-dir="res/values" />
-        <source-file src="src/android/res/values/dimens.xml" target-dir="res/values" />
-        <source-file src="src/android/res/values/styles.xml" target-dir="res/values" />
-		
+        <source-file src="src/android/res/values/colorsAgora.xml" target-dir="res/values" />
+        <source-file src="src/android/res/values/dimensAgora.xml" target-dir="res/values" />
         <source-file src="src/android/res/values/stringsAgora.xml" target-dir="res/values" />
-
+        <source-file src="src/android/res/values/stylesAgora.xml" target-dir="res/values" />
+		
         <source-file src="src/android/libs/agora-rtc-sdk.jar" target-dir="libs" />
 
         <source-file src="src/android/libs/arm64-v8a/libagora-crypto.so" target-dir="libs/arm64-v8a" />
