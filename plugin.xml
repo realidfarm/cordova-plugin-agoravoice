@@ -71,7 +71,7 @@
         <source-file src="src/android/res/values/dimens.xml" target-dir="res/values" />
         <source-file src="src/android/res/values/styles.xml" target-dir="res/values" />
 		
-        <resource-file src="src/android/res/values/strings_agora.xml" target-dir="res/values" />
+        <source-file src="src/android/res/values/stringsAgora.xml" target-dir="res/values" />
 
         <source-file src="src/android/libs/agora-rtc-sdk.jar" target-dir="libs" />
 
