@@ -1,6 +1,7 @@
 package com.realidfarm.agoravoice;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -19,6 +20,8 @@ import io.agora.rtc.IRtcEngineEventHandler;
 import io.agora.rtc.RtcEngine;
 
 import com.realidfarm.impicc.R;
+
+import org.apache.cordova.PluginResult;
 
 public class VoiceChatViewActivity extends Activity {
 
@@ -151,6 +154,11 @@ public class VoiceChatViewActivity extends Activity {
 
     // Tutorial Step 3
     public void onEncCallClicked(View view) {
+        Bundle conData = new Bundle();
+        conData.putString("results", "close");
+        Intent intent = new Intent();
+        intent.putExtras(conData);
+        setResult(90, intent);
         finish();
     }
 

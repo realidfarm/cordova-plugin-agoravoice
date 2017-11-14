@@ -185,6 +185,11 @@ public class VideoChatViewActivity extends Activity {
 
     // Tutorial Step 6
     public void onEncCallClicked(View view) {
+        Bundle conData = new Bundle();
+        conData.putString("results", "close");
+        Intent intent = new Intent();
+        intent.putExtras(conData);
+        setResult(90, intent);
         finish();
     }
 
