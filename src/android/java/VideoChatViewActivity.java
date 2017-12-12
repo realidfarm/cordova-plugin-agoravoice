@@ -218,6 +218,7 @@ public class VideoChatViewActivity extends Activity {
         surfaceView.setZOrderMediaOverlay(true);
         container.addView(surfaceView);
         mRtcEngine.setupLocalVideo(new VideoCanvas(surfaceView, VideoCanvas.RENDER_MODE_ADAPTIVE, 0));
+		mRtcEngine.enableWebSdkInteroperability(true);
     }
 
     // Tutorial Step 4
